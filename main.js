@@ -84,3 +84,39 @@ if(keyPressed=='39'){
     console.log("right");
 }
 }   
+function up(){
+    if(playery>=0){
+    playery=playery-blockheigth;
+    console.log("Block Height is"+blockheigth);
+    console.log("Whe up pressed x="+playerx+"y="+playery);
+    canvas.remove(playerobject);
+    playerupdate();
+}
+}
+function down(){
+    if(playery<460){
+    playery=playery+blockheigth;
+    console.log("Block Height is"+blockheigth);
+    console.log("When down pressed x="+playerx+"y="+playery);
+    canvas.remove(playerobject);
+    playerupdate();
+}
+}
+function left(){
+    if(playerx>=0){
+        playerx=playerx-blockwidth;
+        console.log("Block WIdth is"+blockwidth);
+        console.log("When left is press x="+playerx+"y="+playery);
+        canvas.remove(playerobject);
+        playerupdate();
+    }
+}
+function right(){
+    if(playerx<850){
+        playerx=playerx+blockwidth;
+        console.log("Block Width is"+blockwidth);
+        console.log("WHEN RIGHT IS PREESED X="+playerx+"Y="+playery);
+        canvas.remove(playerobject);
+        playerupdate();
+    }
+}
